@@ -7,10 +7,12 @@ Transactions Module: Handles deposits and withdrawals with real-time balance val
 Data Persistence: Navigates data seamlessly by loading and saving to a flat-file database (Clients.txt).
 User Interface: Organizes operations through a clean, menu-driven system for enhanced user experience.
 
+
 🛠️ Built With
 Language: C++
 Libraries: Standard Template Library (STL) - Vectors, Strings, Algorithms.
 Storage: File Streaming (fstream) for persistent data storage.
+
 
 📖 How to Use
 Clone the repository:
@@ -19,6 +21,7 @@ git clone https://github.com/khaledwaled21/Bank-Management-System-CPP.git
 Compile the source code: Compile the Bank_Project.cpp file using any C++ compiler (G++, MSVC).
 Setup Data File: Important: Ensure the Clients.txt file is in the same directory as the executable file before running to allow the program to load/save data.
 Run the application: Follow the on-screen menu instructions to manage clients and transactions.
+
 
 📈 Future Improvements
 [ ] Transform the procedural logic into Object-Oriented Programming (OOP).
