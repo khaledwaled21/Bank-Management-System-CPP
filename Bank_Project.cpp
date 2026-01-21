@@ -481,8 +481,7 @@ void returnToTransactionsMenu()
     cout << "\n\nPress any key to return to transactions menue...";
     _getch();
     system("cls");
-    Transactions_Screen();
-}
+ }
 
 // Transactions (Depositing) Code : 
 void Depositing(vector <sClient>& VClients, string account_number)
@@ -672,11 +671,7 @@ void Perform_Transactions_options(TransactionsMenue Menue)
         Perform_Total_Balances(stClients, VClientsGlobal);
         break;
     }
-    case 4:
-    {
-        Start_screen();
-        break;
-    }
+     
 
     }
 }
@@ -690,6 +685,9 @@ int ReadTransactionsmenueOptions()
 }
 void Transactions_Screen()
 {
+    while (true)
+    {
+
     system("cls");
     cout << "========================================================================================================================\n";
     cout << "                                              Transactions menue screen                                      \n";
@@ -699,8 +697,16 @@ void Transactions_Screen()
     cout << "                                             [3]Total balances.\n";
     cout << "                                             [4]Main menue.\n";
     cout << "========================================================================================================================\n";
-    Perform_Transactions_options((TransactionsMenue)ReadTransactionsmenueOptions());
 
+    int option = ReadTransactionsmenueOptions();
+    if (option == 4)
+    {
+        break;
+    }
+    Perform_Transactions_options((TransactionsMenue)option);
+
+
+    }
 }
 //......................................................................................
 
