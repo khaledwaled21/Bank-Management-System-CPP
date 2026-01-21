@@ -2,7 +2,7 @@
 
 A specialized financial tool developed in C++ designed for secure client management, real-time transaction tracking, and advanced user administration through an intuitive console interface.
 
-🚀 Key Features
+🚀 Key Features :
 * User Authentication: Secure login system to verify identities before accessing the system.
 * Permissions Management: Granular control over user actions, allowing specific access to different modules (Admin/User).
 * Client Management: Executes complete CRUD operations (Add, Delete, Update, and Find) for bank clients.
@@ -25,7 +25,7 @@ git clone https://github.com/khaledwaled21/Bank-Management-System-CPP.git
 * Setup Data Files: Important: Ensure both Clients.txt and Users.txt files are in the same directory as the executable file before running to allow the program to load/save data.
 * Run the application: Log in with your credentials to start managing clients and system users.
 
-📈 Future Improvements
-*[ ]  Transform the remaining procedural logic into Object-Oriented Programming (OOP)
-*[ ]  Implement a Transaction History log file to track all financial activities.
-*[ ]  Enhance input validation to handle non-numeric data and prevent runtime errors.
+📈 Future Improvements :
+* [ ] Transform the remaining procedural logic into Object-Oriented Programming (OOP)
+* [ ] Implement a Transaction History log file to track all financial activities.
+* [ ] Enhance input validation to handle non-numeric data and prevent runtime errors.
