@@ -287,7 +287,7 @@ void ADDING_CLIENTS(sClient &CClients, vector <sClient>& VClients)
     }
 
     adding_Client(account_number);
-    returnToMainMenu();
+    ReturnToMainMenu();
 }
 //...............
 
@@ -343,7 +343,7 @@ void DELETING_CLIENTS(sClient &CClients, vector <sClient> &VClients)
     if (FindClientByAccountNumber(account_number, VClients, CClients))
     {
         DeleteClientByAccountNumber(account_number, VClients);
-        returnToMainMenu();
+        ReturnToMainMenu();
         
 
     }
@@ -441,7 +441,7 @@ void UPDATING_CLIENT_INFO(sClient &CClients, vector <sClient> &VClients)
      
     
         ChangingClientDataByAccountNumber(account_number, VClients);
-        returnToMainMenu();
+        ReturnToMainMenu();
      
           
      
@@ -460,12 +460,12 @@ void FIND_CLIENT(sClient &CClients, vector <sClient> &VClients)
     if (FindClientByAccountNumber(account_number, VClients, CClients))
     {
         PrintClientCard(CClients);
-        returnToMainMenu();
+        ReturnToMainMenu();
     }
     else
     {
         cout << "Client (" << account_number << ") does not exist\n";
-        returnToMainMenu();
+        ReturnToMainMenu();
     }
     
 }
@@ -476,7 +476,7 @@ void FIND_CLIENT(sClient &CClients, vector <sClient> &VClients)
 /*
 TRANSACTIONS CODE :  
 */
-void returnToTransactionsMenu()
+void ReturnToTransactionsMenu()
 {
     cout << "\n\nPress any key to return to transactions menue...";
     _getch();
@@ -529,7 +529,7 @@ void Perform_Depositing(sClient& CClients, vector <sClient>& VClients)
 
     PrintClientCard(CClients);
     Depositing(VClients, account_number);
-    returnToTransactionsMenu();
+    ReturnToTransactionsMenu();
 
 
 }
@@ -591,7 +591,7 @@ void Perform_Withdraw(sClient& CClients, vector <sClient>& VClients)
 
     PrintClientCard(CClients);
     WithDrawing(CClients, VClients, account_number);
-    returnToTransactionsMenu();
+    ReturnToTransactionsMenu();
 
 }
 
@@ -628,7 +628,7 @@ void Print_allCleintsData_BankExtension(vector <sClient> vClients)
 void Counting_Total_Balances(vector <sClient> &VClients)
 {
     double Total_Balances = 0;
-    for (sClient Client : VClients)
+    for (sClient &Client : VClients)
     {
         Total_Balances += Client.AccountBalance;
     }
@@ -645,7 +645,7 @@ void Perform_Total_Balances(sClient& CClients, vector <sClient>& VCleints)
 
     Print_allCleintsData_BankExtension(VCleints);
     Counting_Total_Balances(VCleints);
-    returnToTransactionsMenu();
+    ReturnToTransactionsMenu();
 }
 
 
@@ -745,7 +745,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
         {
         system("cls");
         PrintAllClientsData(VClients);
-        returnToMainMenu();
+        ReturnToMainMenu();
        
         }
         else
@@ -754,7 +754,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
 
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
-            returnToMainMenu();
+            ReturnToMainMenu();
              
         }
         break;
@@ -772,7 +772,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
 
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
@@ -790,7 +790,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
 
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
@@ -808,7 +808,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
 
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
@@ -826,7 +826,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
 
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
@@ -844,7 +844,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
 
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
@@ -862,7 +862,7 @@ void PerformMainMenueOption(MainmenueOptions MenueOption , int UserPermissions)
             cout << "Access Denied\n";
             cout << "You arenot allowed to do this , Please contact your Admin . \n";
 
-            returnToMainMenu();
+            ReturnToMainMenu();
         }
         break;
     }
