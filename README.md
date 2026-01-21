@@ -25,6 +25,6 @@ git clone https://github.com/khaledwaled21/Bank-Management-System-CPP.git
 * Run the application: Log in with your credentials to start managing clients and system users.
 
 📈 Future Improvements
-[ ] Transform the remaining procedural logic into Object-Oriented Programming (OOP)
-[ ] Implement a Transaction History log file to track all financial activities.
-[ ] Enhance input validation to handle non-numeric data and prevent runtime errors.
+[ ]  Transform the remaining procedural logic into Object-Oriented Programming (OOP)
+[ ]  Implement a Transaction History log file to track all financial activities.
+[ ]  Enhance input validation to handle non-numeric data and prevent runtime errors.
