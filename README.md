@@ -1,31 +1,41 @@
-# Bank Management System (C++)
+ # 🏦 Bank Management System (OOP Version)
 
-A specialized financial tool developed in C++ designed for secure client management, real-time transaction tracking, and advanced user administration through an intuitive console interface.
+A professional financial administration tool entirely refactored from procedural C++ to a robust, modular **Object-Oriented Architecture**.
 
-🚀 Key Features :
-* User Authentication: Secure login system to verify identities before accessing the system.
-* Permissions Management: Granular control over user actions, allowing specific access to different modules (Admin/User).
-* Client Management: Executes complete CRUD operations (Add, Delete, Update, and Find) for bank clients.
-* Transactions Module: Handles deposits and withdrawals with real-time balance validation.
-* User Administration: A dedicated module for administrators to Add, Delete, Update, and Find system users.
-* Data Persistence: Navigates data seamlessly by loading and saving to flat-file databases (Clients.txt and Users.txt).
+## 🚀 Key Features
 
+* **Object-Oriented Architecture:** Entirely redesigned using core OOP principles: Inheritance, Abstraction, and Encapsulation.
 
-🛠️ Built With : 
-* Language: C++
+* **Modular Screen System:** Every functionality (Login, Transactions, User Management) is isolated in its own dedicated class for maximum scalability.
 
-* Modular Design: Uses custom header files (UsersLibrary.h) and Namespaces for better code organization.
-* Libraries: Standard Template Library (STL) - Vectors, Strings, Algorithms.
-* Storage: File Streaming (fstream) for persistent data storage.
+* **User Authentication & Permissions:** Secure login system with a granular permissions bit-mask to control user access levels.
 
-📖 How to Use : 
-* Clone the repository:
-git clone https://github.com/khaledwaled21/Bank-Management-System-CPP.git
-* Compile the source code: Compile the Bank_Project.cpp file using any C++ compiler (G++, MSVC). Ensure UsersLibrary.h is in the same directory during compilation.
-* Setup Data Files: Important: Ensure both Clients.txt and Users.txt files are in the same directory as the executable file before running to allow the program to load/save data.
-* Run the application: Log in with your credentials to start managing clients and system users.
+* **Comprehensive Logging:** Automated registration system for all Login activities and Transfer transactions into dedicated log files.
 
-📈 Future Improvements :
-* [ ] Transform the remaining procedural logic into Object-Oriented Programming (OOP)
-* [ ] Implement a Transaction History log file to track all financial activities.
-* [ ] Enhance input validation to handle non-numeric data and prevent runtime errors.
+* **Advanced Utility Libraries:** Custom-built classes for robust input validation (`clsInputValidate`), complex date handling (`clsDate`), and advanced string manipulation (`clsString`).
+
+## 🛠️ Built With
+
+* **Language Standard:** C++20.
+
+* **Architecture:** Modular Object-Oriented Programming (OOP).
+
+* **IDE:** Developed using Microsoft Visual Studio.
+
+## 📖 How to Use
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/khaledwaled21/Bank-Management-System-CPP.git](https://github.com/khaledwaled21/Bank-Management-System-CPP.git)
+* Setup Data Files:
+* Important: Ensure the following files are present in the executable directory: Clients.txt, Users.txt, and TransfersLog.txt.
+
+## Compile and Run:
+* Open the Bank_Project(OOP).slnx file in Visual Studio 2022 and run the project.
+
+## 📈 Future Improvements
+* [ ] Integrate a Database Management System (like SQLite) to replace flat-file storage.
+
+* [ ] Develop a Graphical User Interface (GUI) using Qt or SFML.
+
+* [ ] Implement Advanced Encryption algorithms for all stored data files.
