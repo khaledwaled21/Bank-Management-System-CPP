@@ -333,7 +333,7 @@ public:
                 return enSaveResults::svFaildEmptyObject;
 
             }
-
+            break;
         }
 
         case enMode::UpdateMode:
