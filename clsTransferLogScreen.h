@@ -12,7 +12,7 @@ class clsTransferLogScreen :protected clsScreen
 
 private:
 
-    static void PrintTransferLogRecordLine(clsBankClient::stTrnsferLogRecord TransferLogRecord)
+    static void PrintTransferLogRecordLine(clsBankClient::stTrnsferLogRecord& TransferLogRecord)
     {
 
         cout << setw(8) << left << "" << "| " << setw(23) << left << TransferLogRecord.DateTime;

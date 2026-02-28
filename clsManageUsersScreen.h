@@ -38,35 +38,31 @@ private:
 
     static void _ShowListUsersScreen()
     {
-        //cout << "\nList Users Screen Will Be Here.\n";
+         
         clsListUsersScreen::ShowUsersList();
 
     }
 
     static void _ShowAddNewUserScreen()
     {
-        // cout << "\nAdd New User Screen Will Be Here.\n";
-        clsAddNewUserScreen::ShowAddNewUserScreen();
+         clsAddNewUserScreen::ShowAddNewUserScreen();
 
     }
 
     static void _ShowDeleteUserScreen()
     {
-        // cout << "\nDelete User Screen Will Be Here.\n";
-        clsDeleteUserScreen::ShowDeleteUserScreen();
+         clsDeleteUserScreen::ShowDeleteUserScreen();
 
     }
 
     static void _ShowUpdateUserScreen()
     {
-        // cout << "\nUpdate User Screen Will Be Here.\n";
-        clsUpdateUserScreen::ShowUpdateUserScreen();
+         clsUpdateUserScreen::ShowUpdateUserScreen();
     }
 
     static void _ShowFindUserScreen()
     {
-        //cout << "\nFind User Screen Will Be Here.\n";
-        clsFindUserScreen::ShowFindUserScreen();
+         clsFindUserScreen::ShowFindUserScreen();
     }
 
     static void _PerformManageUsersMenueOption(enManageUsersMenueOptions ManageUsersMenueOption)
@@ -156,7 +152,7 @@ public:
             cout << "                                                [6] Main Menue.\n";
             cout << "========================================================================================================================\n";
 
-            int option = ReadManageUsersMenueOption();
+            short option = ReadManageUsersMenueOption();
 
             if (option == 6)
                 return;

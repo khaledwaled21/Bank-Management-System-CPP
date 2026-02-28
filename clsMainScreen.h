@@ -12,6 +12,7 @@
 #include "Global.h"
 #include <conio.h>
 #include "clsLoginRegisterScreen.h"
+#include "clsCurrencyScreen.h"
 using namespace std;
 
 class clsMainScreen :protected clsScreen
@@ -22,13 +23,13 @@ private:
     enum enMainMenueOptions {
         eListClients = 1, eAddNewClient = 2, eDeleteClient = 3,
         eUpdateClient = 4, eFindClient = 5, eShowTransactionsMenue = 6,
-        eManageUsers = 7, eLoginRegister ,eExit = 9
+        eManageUsers = 7, eLoginRegister = 8 , eCurrencyExchange = 9 ,  eExit = 10
     };
 
     static short _ReadMainMenueOption()
     {
-        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 9]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 9, "\t\t\t            Number is not within range [1,9], Enter again:");
+        cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 10]? ";
+        short Choice = clsInputValidate::ReadShortNumberBetween(1, 10, "\t\t\t            Number is not within range [1,10], Enter again:");
         return Choice;
     }
 
@@ -86,6 +87,11 @@ private:
     static void _ShowLoginRegisterScreen()
     {
         clsLoginRegisterScreen::ShowLoginRegisterScreen();
+    }
+    
+    static void _CurrencyExchange()
+    {
+        clsCurrencyScreen::ShowCurrencyExchangeMenue();
     }
 
     static void _Logout()
@@ -166,6 +172,14 @@ private:
             break;
         }
 
+        case enMainMenueOptions::eCurrencyExchange:
+        {
+            system("cls");
+            _CurrencyExchange();
+            break;
+        }
+
+
 
         case enMainMenueOptions::eExit:
             system("cls");
@@ -191,18 +205,19 @@ public:
             cout << "========================================================================================================================\n";
             cout << "                                                      Main menue screen                                              \n";
             cout << "========================================================================================================================\n";
-            cout << "                                                     [1]Show Client List.\n";
-            cout << "                                                     [2]Add New Client.\n";
-            cout << "                                                     [3]Delete Client.\n";
-            cout << "                                                     [4]Update Client Info.\n";
-            cout << "                                                     [5]Find Client.\n";
-            cout << "                                                     [6]Transactions Menue.\n";
-            cout << "                                                     [7]Manage Users Screen.\n";
-            cout << "                                                     [8]Show Login Register Screen\n";
-            cout << "                                                     [9]LogOut.\n";
+            cout << "                                                     [1] Show Client List.\n";
+            cout << "                                                     [2] Add New Client.\n";
+            cout << "                                                     [3] Delete Client.\n";
+            cout << "                                                     [4] Update Client Info.\n";
+            cout << "                                                     [5] Find Client.\n";
+            cout << "                                                     [6] Transactions Menue.\n";
+            cout << "                                                     [7] Manage Users Screen.\n";
+            cout << "                                                     [8] Show Login Register Screen\n";
+            cout << "                                                     [9] Currency Exchange Screen\n";
+            cout << "                                                     [10] LogOut.\n";
             cout << "========================================================================================================================\n";
-            int Option = _ReadMainMenueOption();
-            if (Option == 9)
+            short Option = _ReadMainMenueOption();
+            if (Option == 10)
                 break;
            _PerfromMainMenueOption((enMainMenueOptions)Option);
         }

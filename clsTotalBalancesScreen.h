@@ -10,7 +10,7 @@ class clsTotalBalancesScreen : protected clsScreen
 
 private:
 
-    static void PrintClientRecordBalanceLine(clsBankClient Client)
+    static void PrintClientRecordBalanceLine(clsBankClient& Client)
     {
         cout << setw(25) << left << "" << "| " << setw(15) << left << Client.AccountNumber();
         cout << "| " << setw(40) << left << Client.FullName();

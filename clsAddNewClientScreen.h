@@ -30,7 +30,7 @@ private:
         Client.AccountBalance = clsInputValidate::ReadFloatNumber();
     }
 
-    static void _PrintClient(clsBankClient Client)
+    static void _PrintClient(clsBankClient& Client)
     {
         cout << "\nClient Card:";
         cout << "\n___________________";
@@ -52,7 +52,7 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pAddNewClient))
         {
-            return;// this will exit the function and it will not continue
+            return; 
         }
 
 

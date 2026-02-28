@@ -9,7 +9,7 @@ class clsDeleteClientScreen :protected clsScreen
 {
 
 private:
-    static void _PrintClient(clsBankClient Client)
+    static void _PrintClient(clsBankClient& Client)
     {
         cout << "\nClient Card:";
         cout << "\n___________________";
@@ -30,7 +30,7 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pDeleteClient))
         {
-            return;// this will exit the function and it will not continue
+            return; 
         }
 
         _DrawScreenHeader("\tDelete Client Screen");

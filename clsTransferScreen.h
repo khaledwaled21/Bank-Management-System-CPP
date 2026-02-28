@@ -9,7 +9,7 @@ class clsTransferScreen :protected clsScreen
 {
 
 private:
-    static void _PrintClient(clsBankClient Client)
+    static void _PrintClient(clsBankClient& Client)
     {
         cout << "\nClient Card:";
         cout << "\n___________________\n";
@@ -59,7 +59,7 @@ private:
         while (Amount > SourceClient.AccountBalance)
         {
             cout << "\nAmount Exceeds the available Balance, Enter another Amount ? ";
-            Amount = clsInputValidate::ReadDblNumber();
+            Amount = clsInputValidate::ReadFloatNumber();
         }
         return Amount;
     }

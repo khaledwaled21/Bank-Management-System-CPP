@@ -32,7 +32,7 @@ private:
         User.Permissions = _ReadPermissionsToSet();
     }
 
-    static void _PrintUser(clsUser User)
+    static void _PrintUser(clsUser& User)
     {
         cout << "\nUser Card:";
         cout << "\n___________________";
@@ -120,6 +120,13 @@ private:
         if (Answer == 'y' || Answer == 'Y')
         {
             Permissions += clsUser::enPermissions::pShowLoginRegister;
+        }
+
+        cout << "\nShow Currency Exchange? y/n? ";
+        cin >> Answer;
+        if (Answer == 'y' || Answer == 'Y')
+        {
+            Permissions += clsUser::enPermissions::pCurrencyExchange;
         }
 
         return Permissions;

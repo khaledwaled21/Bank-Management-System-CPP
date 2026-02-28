@@ -27,7 +27,7 @@ private:
     static short ReadTransactionsMenueOption()
     {
         cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 6]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 6, "\t\t\t            Number is not within range [1,9], Enter again:");
+        short Choice = clsInputValidate::ReadShortNumberBetween(1, 6, "\t\t\t            Number is not within range [1,6], Enter again:");
         return Choice;
     }
 
@@ -156,14 +156,14 @@ public:
         cout << "========================================================================================================================\n";
         cout << "                                              Transactions menue screen                                      \n";
         cout << "========================================================================================================================\n";
-        cout << "                                             [1]Deposite.\n";
-        cout << "                                             [2]Withdraw.\n";
-        cout << "                                             [3]Total balances.\n";
-        cout << "                                             [4]Transfer Screen.\n";
-        cout << "                                             [5]Transfer Log Screen\n";
-        cout << "                                             [6]Main menue.\n";
+        cout << "                                             [1] Deposite.\n";
+        cout << "                                             [2] Withdraw.\n";
+        cout << "                                             [3] Total balances.\n";
+        cout << "                                             [4] Transfer Screen.\n";
+        cout << "                                             [5] Transfer Log Screen\n";
+        cout << "                                             [6] Main menue.\n";
         cout << "========================================================================================================================\n";
-        int Option = ReadTransactionsMenueOption();
+        short Option = ReadTransactionsMenueOption();
         if (Option == 6)
             break;
 

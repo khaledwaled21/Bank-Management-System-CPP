@@ -11,7 +11,7 @@ class clsLoginRegisterScreen :protected clsScreen
 
 private:
 
-    static void PrintLoginRegisterRecordLine(clsUser::stLoginRegisterRecord LoginRegisterRecord)
+    static void PrintLoginRegisterRecordLine(clsUser::stLoginRegisterRecord& LoginRegisterRecord)
     {
 
         cout << setw(8) << left << "" << "| " << setw(35) << left << LoginRegisterRecord.DateTime;

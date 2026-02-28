@@ -9,7 +9,7 @@ class clsListUsersScreen :protected clsScreen
 {
 
 private:
-    static void _PrintUserRecordLine(clsUser User)
+    static void _PrintUserRecordLine(clsUser& User)
     {
 
         cout << setw(8) << left << "" << "| " << setw(12) << left << User.UserName;
